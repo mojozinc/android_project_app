@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#2357da</color>
-    <color name ="colorButton">#18ab8d</color>
+    <color name="colorButton">#18ab8d</color>
     <color name="colorPrimaryDark">#2357da</color>
     <color name="colorPrimaryLight">#de5c8edf</color>
     <color name="colorAccent">#08e488</color>
@@ -10,4 +10,6 @@
     <color name="color3">#1631ab</color>
     <color name="color4">#494f66</color>
     <color name="color5">#da111b</color>
+
+    <color name="black_overlay">#66000000</color>
 </resources>

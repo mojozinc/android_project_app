@@ -21,21 +21,23 @@
         android:layout_marginTop="60dp"
         android:id="@+id/linearLayout">
 
-        <EditText
+        <AutoCompleteTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:hint="username"
+            android:text=""
             android:ems="10"
-            android:id="@+id/editText"
+            android:id="@+id/username_field"
             android:layout_gravity="center_horizontal" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
+            android:text="@string/default_password"
             android:ems="10"
-            android:id="@+id/editText2"
+            android:id="@+id/password_field"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="4dp"
             android:hint="password" />
