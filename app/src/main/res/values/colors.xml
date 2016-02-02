@@ -3,13 +3,7 @@
     <color name="colorPrimary">#2357da</color>
     <color name="colorButton">#18ab8d</color>
     <color name="colorPrimaryDark">#2357da</color>
-    <color name="colorPrimaryLight">#de5c8edf</color>
-    <color name="colorAccent">#08e488</color>
-    <color name="color1">#5dff40</color>
-    <color name="color2">#40ffdf</color>
-    <color name="color3">#1631ab</color>
-    <color name="color4">#494f66</color>
-    <color name="color5">#da111b</color>
-
+    <color name="colorPrimaryLight">#deaac3ea</color>
+    <color name="colorAccent">#037bd7</color>
     <color name="black_overlay">#66000000</color>
 </resources>
