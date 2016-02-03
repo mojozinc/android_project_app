@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="50dp"
+    android:layout_width="match_parent" android:layout_height="120dp"
+    android:layout_margin="5dp"
     android:elevation="10dp">
     <TextView
         android:layout_width="0dp"
@@ -8,53 +9,52 @@
         android:id="@+id/movie_id"/>
 
     <ImageView
-        android:layout_width="wrap_content"
+        android:layout_width="56dp"
         android:layout_height="wrap_content"
         android:id="@+id/movie_image"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
         android:background="@drawable/batman_logo"
-        android:layout_toLeftOf="@+id/movie_description"
-        android:layout_toStartOf="@+id/movie_description" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Pulp Fiction"
-        android:textSize="15dp"
-        android:textColor="#0e0101"
-        android:id="@+id/movie_name"
-        android:layout_marginLeft="97dp"
-        android:layout_below="@+id/movie_id"
-        android:layout_toRightOf="@+id/movie_id"
-        android:layout_toEndOf="@+id/movie_id"
-        android:layout_marginStart="97dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Text"
-        android:textSize="15dp"
-        android:textColor="#0a0808"
-        android:id="@+id/movie_description"
         android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/movie_name"
-        android:layout_alignStart="@+id/movie_name"
-        android:layout_marginBottom="5dp"
-        android:layout_marginRight="5dp" />
+        android:layout_alignParentLeft="true"
+        android:elevation="15dp"
+        android:layout_margin="5dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="rating"
-        android:textSize="15dp"
-        android:textColor="@android:color/background_dark"
-        android:id="@+id/movie_rating"
-        android:layout_alignTop="@+id/movie_description"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="32dp"
-        android:layout_marginEnd="32dp" />
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/movie_name"
+        android:textColor="#121010"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/movie_image"
+        android:layout_toEndOf="@+id/movie_image" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Small Text"
+        android:id="@+id/movie_description"
+        android:textColor="#120b0b"
+        android:layout_below="@+id/movie_name"
+        android:layout_alignLeft="@+id/movie_name"
+        android:layout_alignStart="@+id/movie_name" />
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/movie_ratingBar"
+        android:clickable="false"
+        android:isIndicator="true"
+        android:background="#0714f1ea"
+        android:rating="2"
+        android:layout_alignBottom="@+id/movie_image"
+        android:layout_alignLeft="@+id/movie_description"
+        android:layout_alignStart="@+id/movie_description"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp" />
+
 
 </RelativeLayout>

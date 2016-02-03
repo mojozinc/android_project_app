@@ -32,14 +32,14 @@ public class Insert_movie extends Activity {
                 dbm.open();
                 dbm.insert_movie(m);
                 dbm.close();
-                finishActivity(CONTEXT_INCLUDE_CODE);
+                finish();
             }
         });
 
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finishActivity(CONTEXT_INCLUDE_CODE);
+                finish();
             }
         });
     }

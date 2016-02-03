@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">class_app</string>
+    <string name="app_name">Imdb-fake</string>
     <string name="action_settings">Settings</string>
     <string name="login_button_title">LOGIN</string>
     <string name="default_username">kamak2690</string>
@@ -8,4 +8,6 @@
     <string name="title_activity_login_splash">LoginSplashActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="title_activity_splash">SplashActivity</string>
 </resources>

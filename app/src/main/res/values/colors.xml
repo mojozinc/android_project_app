@@ -6,4 +6,6 @@
     <color name="colorPrimaryLight">#deaac3ea</color>
     <color name="colorAccent">#037bd7</color>
     <color name="black_overlay">#66000000</color>
+    <color name="white">#f2efef</color>
+    <color name="rating_starcolor">#09f181</color>
 </resources>

@@ -19,5 +19,8 @@
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/listView"/>
+        android:layout_margin="5dp"
+        android:elevation="5dp"
+        android:id="@+id/listView"
+        android:background="#00f67575" />
 </android.support.design.widget.CoordinatorLayout>

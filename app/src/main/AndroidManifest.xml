@@ -3,12 +3,12 @@
     package="com.example.schrodinger.class_app">
 
     <uses-sdk
-        android:minSdkVersion="16"
+        android:minSdkVersion="18"
         android:targetSdkVersion="21" />
 
-    <android:uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -27,7 +27,12 @@
             </intent-filter>
         </activity>
         <activity android:name=".dashboard" />
-        <activity android:name=".Insert_movie"></activity>
+        <activity
+            android:name=".Insert_movie"
+            android:theme="@android:style/Theme.DeviceDefault.Light.Dialog" />
+        <activity
+            android:name=".deleteActivity"
+            android:theme="@android:style/Theme.DeviceDefault.Light.Dialog"></activity>
     </application>
 
 </manifest>
