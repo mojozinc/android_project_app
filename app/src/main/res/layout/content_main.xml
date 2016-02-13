@@ -10,7 +10,8 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:id="@+id/screen_main"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.schrodinger.class_app.MainActivity">
+    tools:context="com.example.schrodinger.class_app.MainActivity"
+    android:gravity="center_vertical">
 
     <LinearLayout
         android:orientation="vertical"
@@ -18,7 +19,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp"
         android:id="@+id/linearLayout">
 
         <AutoCompleteTextView
@@ -48,7 +48,7 @@
         android:text="@string/login_button_title"
         android:onClick="login_action"
         android:id="@+id/login_main"
-        android:background="@color/colorPrimaryLight"
+        android:background="@color/colorButton"
         android:layout_below="@+id/linearLayout"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -61,7 +61,7 @@
         android:text="Cancel"
         android:onClick="cancel_action"
         android:id="@+id/cancel_main"
-        android:background="@color/colorPrimaryLight"
+        android:background="@color/colorButton"
         android:layout_alignTop="@+id/login_main"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"

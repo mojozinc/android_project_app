@@ -2,6 +2,9 @@ package com.example.schrodinger.class_app;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
+import android.support.v4.content.ContextCompat;
+import android.support.v4.graphics.drawable.DrawableCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -51,6 +54,9 @@ public class Insert_movie extends Activity {
         name=(EditText)findViewById(R.id.edit_movie_name);
         desc=(EditText)findViewById(R.id.edit_movie_desc);
         rating=(RatingBar)findViewById(R.id.ratingBar);
+
+        Drawable progress = rating.getProgressDrawable();
+        DrawableCompat.setTint(progress, ContextCompat.getColor(getApplicationContext(), R.color.colorPrimary));
 
     }
 }

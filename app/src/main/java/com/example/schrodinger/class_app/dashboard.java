@@ -62,12 +62,23 @@ public class dashboard extends AppCompatActivity {
         list.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-                int movie_id=Integer.parseInt(((TextView)view.findViewById(R.id.movie_id)).getText().toString());
-                Intent i=new Intent(getApplicationContext(),deleteActivity.class);
-                i.putExtra("movie_id",movie_id);
-                startActivityForResult(i,2);
+                int movie_id = Integer.parseInt(((TextView) view.findViewById(R.id.movie_id)).getText().toString());
+
+                Intent i = new Intent(getApplicationContext(), deleteActivity.class);
+                i.putExtra("movie_id", movie_id);
+                startActivityForResult(i, 2);
 
                 return true;
+            }
+        });
+
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                int movie_id = Integer.parseInt(((TextView) view.findViewById(R.id.movie_id)).getText().toString());
+                Intent i=new Intent(getApplicationContext(),ShowMovieDetailActivity.class);
+                i.putExtra("movie_id",movie_id);
+                startActivityForResult(i,2);
             }
         });
     }

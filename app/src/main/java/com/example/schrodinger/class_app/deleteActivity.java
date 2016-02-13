@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v7.widget.ButtonBarLayout;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 
 public class deleteActivity extends Activity {
     DbManager dbm;
@@ -16,6 +17,7 @@ public class deleteActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_delete);
+        setTitle("");
         delete_butt=(Button)findViewById(R.id.delete_movie_button);
         dbm=new DbManager(getApplicationContext());
         Intent i=getIntent();

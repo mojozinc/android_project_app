@@ -25,6 +25,7 @@ public class DbManager {
     public void close(){
         db_helper.close();
     }
+
     public void insert_movie(movie_object m){
         ContentValues values=new ContentValues();
         values.put("name",m.name);
@@ -40,7 +41,14 @@ public class DbManager {
         c.moveToFirst();
         return c;
     }
+    public movie_object fetch_movie(int id){
+        Cursor c=db.rawQuery("select name,description,rating from movies where _id="+id+";",null);
+        c.moveToFirst();
+        movie_object m=new movie_object(c.getString(0),c.getString(1),Float.parseFloat(c.getString(2)),id);
 
+        return m;
+
+    }
     public ArrayList<movie_object> fetch_movie_list_array(){
         Cursor c=fetch_movie_list_cursor();
         ArrayList<movie_object> arrayList=new ArrayList<>(c.getCount());

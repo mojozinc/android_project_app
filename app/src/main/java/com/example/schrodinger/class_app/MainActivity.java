@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     RelativeLayout main_screen;
     String username,password;
     CoordinatorLayout root;
+    int [] state;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,17 +46,27 @@ public class MainActivity extends AppCompatActivity {
         edit_password = (EditText) findViewById(R.id.password_field);
         main_screen = (RelativeLayout) findViewById(R.id.screen_main);
         root = (CoordinatorLayout)findViewById(R.id.root_main);
+        root.setStatusBarBackgroundColor(0x2357da);
+        findViewById(R.id.cancel_main).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     protected void onStart(){
         super.onStart();
-
         edit_username.setVisibility(View.VISIBLE);
         edit_password.setVisibility(View.VISIBLE);
         findViewById(R.id.login_main).setVisibility(View.VISIBLE);
         findViewById(R.id.cancel_main).setVisibility(View.VISIBLE);
+    }
 
-
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+    protected void onResume(){
+        super.onResume();
 
     }
 
@@ -97,6 +108,14 @@ public class MainActivity extends AppCompatActivity {
         edit_password.setVisibility(View.INVISIBLE);
         findViewById(R.id.login_main).setVisibility(View.INVISIBLE);
         findViewById(R.id.cancel_main).setVisibility(View.INVISIBLE);
+
+        state=root.getDrawableState();
+        String state_str="";
+        for(int x:state)
+            state_str=state_str+" "+x;;
+
+        Log.d("STATE",state_str);
+
         root.setBackground(getDrawable(batman_logo));
         root.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LOW_PROFILE
                 | View.SYSTEM_UI_FLAG_FULLSCREEN
@@ -108,6 +127,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 root.setBackgroundColor(0);
+                root.setStatusBarBackgroundColor(0x2357da);
                 root.setSystemUiVisibility(0);
                 Intent dashboard_intent = new Intent(getApplicationContext(),dashboard.class);
 

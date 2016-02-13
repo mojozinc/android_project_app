@@ -63,10 +63,14 @@ public class CustomAdapter extends ArrayAdapter<movie_object> {
             TextView desc = (TextView)view.findViewById(R.id.movie_description);
             RatingBar rating = (RatingBar)view.findViewById(R.id.movie_ratingBar);
             Drawable progress = rating.getProgressDrawable();
-            DrawableCompat.setTint(progress, ContextCompat.getColor(view.getContext(),R.color.rating_starcolor));
+            DrawableCompat.setTint(progress, ContextCompat.getColor(view.getContext(),R.color.colorPrimary));
             id.setText(""+elem.id);
             name.setText(elem.name);
-            desc.setText(elem.description);
+            String desc_str=elem.description;
+            if(desc_str.length() >40)
+                desc_str=desc_str.substring(0,37)+"...";
+            desc.setText(desc_str);
+
             rating.setRating(elem.rating);
 
         }
